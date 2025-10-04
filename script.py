@@ -14,9 +14,9 @@ def run(playwright):
     expect(page.get_by_role("heading", name="Bem vindo ao Clima IA")).to_be_visible()
 
     # Expect the form elements to be visible
-    expect(page.get_by_label("Localização:")).to_be_visible()
-    expect(page.get_by_label("Data:")).to_be_visible()
-    expect(page.get_by_role("button", name="Buscar")).to_be_visible()
+    expect(page.get_by_label("Location:")).to_be_visible()
+    expect(page.get_by_label("Date:")).to_be_visible()
+    expect(page.get_by_role("button", name="Search")).to_be_visible()
 
     # Fill out the form
     page.get_by_label("Localização:").fill("São Paulo")

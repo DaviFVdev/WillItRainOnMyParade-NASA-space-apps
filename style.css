@@ -1,3 +1,11 @@
+.merriweather-<uniquifier> {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -10,6 +18,14 @@ body {
     text-align: center;
 }
 
+.site-logo {
+    position: fixed;
+    margin: 20px;
+    top: 0;
+    height: 10rem;
+    width: 17rem;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -17,11 +33,13 @@ body {
 }
 
 h1 {
+    font-family: "Merriweather", serif;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 p {
+    font-family: "Merriweather", serif;
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -35,6 +53,7 @@ p {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     color: #333;
     text-align: left;
+    margin-bottom: 3rem;
 }
 
 .form-group {

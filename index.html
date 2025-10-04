@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aeolus</title>
+    <link rel="stylesheet" href="script.py">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="cloud.png">
+    <link rel="icon" type="image/x-icon" href="./images/Aeorus icon.png">
+    <title>Mapa Earthdata com Seleção de Local</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Aeolus</h1>
-        <p>Um site para a analise de clima em tempo real</p>
+        <img class="site-logo" src="./images/Aeolus logo.png" alt="Website logo">
+        <br>
+        <br>
+        <br>
+        <p>A Website for planning and organizing events based on weather</p>
         <div class="weather-card">
             <form>
                 <div class="form-group">
-                    <label for="location">Localização:</label>
-                    <input type="text" id="location" name="location" placeholder="Digite a cidade">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Type in a location">
                 </div>
                 <div class="form-group">
-                    <label for="date">Data:</label>
+                    <label for="date">Date:</label>
                     <input type="date" id="date" name="date">
                 </div>
-                <button type="submit">Buscar</button>
+                <button type="submit">Search</button>
             </form>
         </div>
     </div>
