@@ -1,15 +1,16 @@
 .merriweather-<uniquifier> {
-  font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 body {
     margin: 0;
     font-family: sans-serif;
-    background: radial-gradient(circle, #3023AE, #100C46);
+    background-image: url('./images/aeolus_background.png');
+    background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
@@ -22,8 +23,8 @@ body {
     position: fixed;
     margin: 20px;
     top: 0;
-    height: 10rem;
-    width: 17rem;
+    height: 15em;
+    width: 25rem;
 }
 
 .container {
@@ -38,6 +39,13 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+.results{
+    font-family: "Merriweather", serif;
+    color: white;
+    position: absolute;
+    top: 3rem;
+}
+
 p {
     font-family: "Merriweather", serif;
     font-size: 1.2rem;
@@ -48,12 +56,13 @@ p {
     background-color: white;
     border-radius: 20px;
     padding: 2rem;
-    width: 300px;
+    width: 500px; /* wider center card */
     height: auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     color: #333;
     text-align: left;
-    margin-bottom: 3rem;
+    margin: 6rem auto 3rem; /* center and give space under the title */
+    backdrop-filter: blur(6px);
 }
 
 .form-group {
@@ -75,7 +84,16 @@ p {
     font-size: 1rem;
 }
 
-button[type="submit"] {
+.Back-Button {
+    position: absolute;
+    margin: 20px;
+    width: 6rem;
+    height: 6rem;
+    top: 10px;
+    left: 10px;
+}
+
+input[type="button"] {
     width: 100%;
     padding: 1rem;
     background-color: #3023AE;
@@ -89,4 +107,83 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #100C46;
+}
+
+/* New styles for results card layout */
+.card-header .location {
+    margin: 0;
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+}
+
+.card-header .summary {
+    margin: 0.25rem 0 1rem 0;
+    color: #666;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.card-left .stat {
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.card-right h3 {
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+
+.hourly-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.hourly-list li {
+    padding: 0.25rem 0;
+}
+
+.notes {
+    color: #444;
+}
+
+.card-actions {
+    margin-top: 1.25rem;
+}
+
+#saveBtn {
+    background: linear-gradient(90deg, #3023AE, #4B39FF);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-card {
+        width: 94vw;
+        padding: 1.25rem;
+    }
+
+    .Back-Button { width: 4.5rem; height: 4.5rem; }
 }
